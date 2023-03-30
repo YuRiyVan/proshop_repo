@@ -1,0 +1,62 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block title %} СТРАНИЦА АВТОРИЗАЦИИ {% endblock %}
+{% block head %} 
+ 
+{% endblock %}
+{% block content %} 
+
+<center> 
+
+{% for i in info %}
+
+<div class="layer2 ">
+<h1> <font size="6" color= #E5D3BD;  face="Times New Roman">{{ i }}</font> </h1>
+<hr>
+</div>
+
+{% endfor %}
+<br>
+</center> 
+<font size="4" color= #E5D3BD;  face="Times New Roman"> 
+</div>
+<div class="space , shadowbox ">
+      <form action="" method="POST" >
+        {% csrf_token %}
+        
+        <div class="form-group">
+            <label for="exampleFormControlInput1"> Name </label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter name" name="username">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput2"> Last_Name </label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter last name" name="last_name">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+        </div>
+        <div class=" left , form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <center>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    <br>
+    <hr>
+     </font>
+     </center>
+    <hr>
+    </form>
+</div>
+    <hr>
+</center>
+    {% endblock %}
+
+    
+    

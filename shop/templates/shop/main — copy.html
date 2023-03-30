@@ -1,0 +1,25 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block title %} ГЛАВНАЯ СТРАНИЦА {% endblock %}
+{% block head %} 
+
+{% endblock %}
+
+
+{% block content %} 
+<br>
+<center>
+{% for i in data %}
+<div class="layer1 , card-group">
+  <div class="card">
+    <img src="{{ category.img.url}}" width="312" height="213" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h3> <a href="category/{{i.category}}" class="card-title"> {{ i.name }}  </a>  </h3>
+    </div>
+  </div>
+</div>
+<br>
+{% endfor%}
+
+
+{% endblock %}

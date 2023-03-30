@@ -1,0 +1,36 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block title %} {% endblock %}
+{% block head %} 
+
+{% endblock %}
+{% block content %} 
+
+ <center>
+   <div class=" layer2 , shadowbox ">
+      <font size="10" color= #E5D3BD;  face="Times New Roman"> {{ name }} </font>
+   </div>
+   <br>
+   <div class="container text-center">
+      <div class="row">
+         {% for i in data %}
+          <div class="col">
+           <div class="  shadowbox , layer1">
+            <div>
+            <p class="card-title"><font size="6" color= #E5D3BD;  face="Times New Roman">{{ i.name }}</font></p> 
+            </div>
+            <a href="../product/{{ i.id }}    "> <img src="{{ category.img.url }}" width="200" height="200" class="card-img-top" alt="..."> </a>
+            <h5 class="card-text"> {{ i.description }}</h2>
+            <h3 class="card-text"> Цена {{ i.price }} (кг.)</h1>
+            <a href="../product/{{ i.id}}    "><font size="4" color= #E5D3BD;  face="Times New Roman"> На страницу товара</font></a>
+            </div>
+           <br>
+          </div>
+         {% endfor %}
+         </div>
+      </div>
+   </div>
+</center>
+   
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block title %} СТРАНИЦА АВТОРИЗАЦИИ {% endblock %}
+{% block head %} 
+
+{% endblock %}
+{% block content %} 
+
+    
+    
+   
+     {% for i in data %}
+     {{ i.name }} 
+     {{ i.img|cut: 'shop/static' }} 
+     <div>
+          <img src="{% static 'shop/static' %}" width="312" height="213" class="card-img-top" alt="...">
+     </div>
+     {% endfor %}   
+    
+
+
+
+{% endblock %}

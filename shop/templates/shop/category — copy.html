@@ -1,0 +1,29 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block title %} {% endblock %}
+{% block head %} 
+
+{% endblock %}
+{% block content %} 
+
+<center>
+<h3> {{ name }} </h3>
+{% for i in data %}
+ <div class="  shadowbox , layer1">
+    <h1 class="card-title">  {{ i.name }}   </h1>
+    <h2 class="card-text"> {{ i.description }}</h2>
+    <h1 class="card-text"> {{ i.price }} </h1>
+    <a href="../product/{{ i.id}}    "> На страницу товара</a>
+ </div>
+ <div class="layer2">
+    <button><img src="{% static 'shop/ok.jpg' %}" width="310" height="200" alt="My image"></button>
+ </div>
+ 
+ {% endfor %}
+</center>
+<br>
+<br>
+<br>
+<br>
+<br>
+{% endblock %}
